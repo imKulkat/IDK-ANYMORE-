@@ -3,72 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects & Iframes</title>
+  <title>Projects & Iframes | Kulkat's Collection</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f7fc;
+      font-family: Arial, sans-serif;
+      background: #181818;
+      color: #f2f2f2;
     }
     nav {
-      background: #222;
-      color: #fff;
-      padding: 1.2em 0.5em;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: #222;
+      color: #fff;
+      padding: 1em 2em;
     }
     .logo {
-      font-weight: 700;
-      font-size: 1.2em;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-right: 2em;
+      letter-spacing: 2px;
+      user-select: text;
+      font-family: sans-serif;
     }
     nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 1.2em;
-      font-size: 1em;
+      margin-left: 1.5em;
+      font-weight: bold;
       transition: color 0.2s;
     }
     nav a:hover {
-      color: #77d;
+      color: #00e6d6;
     }
     .container {
+      max-width: 800px;
       margin: 2em auto;
-      max-width: 1000px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(40,40,60,0.08);
-      padding: 2em 1.5em;
+      padding: 2em;
+      background: #22242a;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px #0003;
     }
     h2 {
-      margin-top: 0;
-      margin-bottom: 1em;
-      color: #444377;
-      font-size: 2em;
       text-align: center;
+      color: #f2f2f2;
+      margin: 0.7em 0 1.2em 0;
     }
     .iframe-area {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-      justify-content: center;
+      flex-direction: column;
+      gap: 2em;
+      align-items: center;
     }
     .iframe-box {
-      flex: 1 1 100%;
+      width: 100%;
       max-width: 600px;
-      margin-bottom: 2em;
-      background: #fafaff;
+      background: #292d35;
       border-radius: 8px;
       padding: 1em;
-      box-shadow: 0 2px 8px rgba(50,50,80,0.04);
+      box-shadow: 0 1px 6px #0002;
+      margin-bottom: 1em;
     }
     .iframe-box h1 {
-      font-size: 1.4em;
+      font-size: 1.3em;
       margin: 0 0 0.6em 0;
+      text-align: center;
+      color: #98fff5;
     }
     .iframe-box p {
       margin: 0.6em 0;
+      color: #f2f2f2;
     }
     iframe {
       width: 100%;
@@ -76,6 +82,14 @@
       border-radius: 10px;
       border: none;
       margin-top: 1em;
+      background: #fff;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 1em; }
+      nav { flex-direction: column; align-items: flex-start; }
+      nav a { margin: 0.5em 0 0 0.3em; }
+      .logo { margin-bottom: 1em; }
+      .iframe-box { padding: 0.5em; }
     }
   </style>
 </head>
@@ -103,7 +117,7 @@
           <iframe src="https://llm-chat-app-template.imkulkat.workers.dev/"></iframe>
           <p>Please do not use this to cheat on school assignments. That would give the school a reason to block this website.</p>
         </div>
-        <!-- Duplicate or add more iframe-boxes as needed -->
+        <!-- Add more iframe-boxes as needed -->
       </div>
     </section>
   </div>
