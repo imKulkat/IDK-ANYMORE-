@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devlogs | Kulkat's Collection</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #181818;
+      color: #f2f2f2;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #222;
+      color: #fff;
+      padding: 1em 2em;
+    }
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-right: 2em;
+      letter-spacing: 2px;
+      user-select: text;
+      font-family: sans-serif;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5em;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #00e6d6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 2em;
+      background: #22242a;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px #0003;
+      
+    }
+    h1, h2, h3 {
+      text-align: center;
+      margin: 0.7em 0;
+    }
+    .devlog-entry {
+      background: #292d35;
+      margin-bottom: 1.2em;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px #0002;
+      text-align: left;
+    }
+    .devlog-entry p {
+      margin: 0.5em 0;
+      text-align: left;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 1em; }
+      nav { flex-direction: column; align-items: flex-start; }
+      nav a { margin: 0.5em 0 0 0.3em; }
+      .logo { margin-bottom: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="logo">KᑌᒪKᗩT'ᔕ ᑕOᒪᒪEᑕTIOᑎ</span>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="devlogs.html">Devlogs</a>
+      <a href="iframes.html">Iframes</a>
+    </div>
+  </nav>
+  <div class="container">
+    <section id="devlogs" class="devlogs">
+      <h2>Devlogs</h2>
+      <div class="devlog-entry">
+        <h3>First website launch</h3>
+        <p>I just launched my first design of Kulkat's Collection. While I absolutely love that I *managed* to upload the website, it looks kind of awful. Will be having UI improvements soon</p>
+        <p> Kulkat11, august 29, 2025</p>
+      </div>
+      <div class="devlog-entry">
+        <h3>UI Overhaul in Progress</h3>
+        <p>I am currently working on the UI after way too long. I added an About Me section to the original website a while back, and I'm actually really proud of it! The website still looks awful in my opinion, but at least the background isn't terrible anymore.</p>
+        <p> Kulkat11, October 15, 2025</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
