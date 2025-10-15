@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Iframes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7fc;
+    }
+    nav {
+      background: #222;
+      color: #fff;
+      padding: 1.2em 0.5em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.2em;
+      font-size: 1em;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #77d;
+    }
+    .container {
+      margin: 2em auto;
+      max-width: 1000px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(40,40,60,0.08);
+      padding: 2em 1.5em;
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1em;
+      color: #444377;
+      font-size: 2em;
+      text-align: center;
+    }
+    .iframe-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+    }
+    .iframe-box {
+      flex: 1 1 100%;
+      max-width: 600px;
+      margin-bottom: 2em;
+      background: #fafaff;
+      border-radius: 8px;
+      padding: 1em;
+      box-shadow: 0 2px 8px rgba(50,50,80,0.04);
+    }
+    .iframe-box h1 {
+      font-size: 1.4em;
+      margin: 0 0 0.6em 0;
+    }
+    .iframe-box p {
+      margin: 0.6em 0;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="logo">KᑌᒪKᗩT'ᔕ ᑕOᒪᒪEᑕTIOᑎ</span>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="devlogs.html">Devlogs</a>
+      <a href="iframes.html">Iframes</a>
+    </div>
+  </nav>
+  <div class="container">
+    <section id="iframes">
+      <h2>Projects & Iframes</h2>
+      <div class="iframe-area">
+        <div class="iframe-box">
+          <h1>Chat</h1>
+          <iframe src="https://definitely-not-a-chat.imkulkat.workers.dev/x7B3kV8pzMSOQy-sYtiXL"></iframe>
+          <p>The chat was a preset from CloudFlare. CloudFlare is what I use to manage the website statistics and code and stuff.</p>
+        </div>
+        <div class="iframe-box">
+          <h1>AI</h1>
+          <iframe src="https://llm-chat-app-template.imkulkat.workers.dev/"></iframe>
+          <p>Please do not use this to cheat on school assignments. That would give the school a reason to block this website.</p>
+        </div>
+        <!-- Duplicate or add more iframe-boxes as needed -->
+      </div>
+    </section>
+  </div>
+</body>
+</html>
