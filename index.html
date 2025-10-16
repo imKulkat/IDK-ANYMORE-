@@ -45,10 +45,41 @@
       background: #22242a;
       border-radius: 10px;
       box-shadow: 0 2px 12px #0003;
+      display: none; /* Hide content until TOS accepted */
     }
     h1, h2 {
       text-align: center;
       margin: 0.7em 0;
+    }
+    /* --- Modal Styles --- */
+    .modal {
+      display: block;
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0; width: 100%; height: 100%;
+      overflow: auto;
+      background: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background: #fff;
+      color: #222;
+      margin: 10% auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 8px;
+      position: relative;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .modal-buttons {
+      text-align: right;
+      margin-top: 20px;
+    }
+    .modal-buttons button {
+      margin-left: 10px;
+    }
+    body.modal-open {
+      overflow: hidden;
     }
     @media (max-width: 600px) {
       .container { padding: 1em; }
@@ -58,7 +89,7 @@
     }
   </style>
 </head>
-<body>
+<body class="modal-open">
   <nav>
     <span class="logo">KᑌᒪKᗩT'ᔕ ᑕOᒪᒪEᑕTIOᑎ</span>
     <div>
@@ -69,7 +100,7 @@
       <a href="Contact-me.html">Contact me</a>
     </div>
   </nav>
-  <div class="container">
+  <div class="container" id="main-content">
     <section id="home">
       <h1>Welcome to Kulkat's Collection</h1>
       <p>Welcome to my website!</p>
@@ -79,5 +110,49 @@
       <p> I am not breaking the rules, so please don't attempt to block my website. It is wrong. If you have any complaints, you can contact me at kulkats.server@gmail.com</p>
     </section>
   </div>
+
+  <!-- TOS Modal -->
+  <div id="tos-modal" class="modal">
+    <div class="modal-content">
+      <h2>Terms of Service</h2>
+      <div style="max-height:200px; overflow:auto;">
+        <p>
+          By using this website, you agree to the following terms:<br>
+          - You will use this website for lawful purposes only.<br>
+          - You must not attempt to hack, disrupt, or misuse this site.<br>
+          - Your activity may be logged for security and improvement.<br>
+          - You may not post illegal material, or therats. or anything about hacking
+          <br>
+          <strong>Read the full TOS here: <a href="FullTOS.html" target="_blank" rel="noopener">Terms of Service here</a>.</strong>
+        </p>
+      </div>
+      <div class="modal-buttons">
+        <button onclick="redirectAway()">Disagree</button>
+        <button onclick="agreeTOS()">Agree</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Hide main content until TOS is agreed
+    document.getElementById('main-content').style.display = 'none';
+    document.body.classList.add('modal-open');
+
+    function redirectAway() {
+      window.location.href = "https://www.google.com"; // Change as needed
+    }
+    function agreeTOS() {
+      document.getElementById("tos-modal").style.display = "none";
+      document.body.classList.remove("modal-open");
+      document.getElementById("main-content").style.display = "block";
+    }
+    // Prevent closing modal with Escape
+    document.addEventListener('keydown', function(event) {
+      if (event.key === "Escape") event.preventDefault();
+    });
+    // Prevent clicking outside to close
+    document.getElementById("tos-modal").addEventListener('click', function(event) {
+      if (event.target === this) event.stopPropagation();
+    });
+  </script>
 </body>
 </html>
