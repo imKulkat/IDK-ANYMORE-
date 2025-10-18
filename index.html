@@ -154,5 +154,32 @@
       if (event.target === this) event.stopPropagation();
     });
   </script>
+  <script>
+  // Konami code using arrow keys and B, A
+  const konami = [
+    'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+    'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
+    'b', 'a'
+  ];
+  let konamiIdx = 0;
+
+  document.addEventListener('keydown', function(event) {
+    let key = event.key;
+    // For B and A keys, lowercase for consistency
+    if (/^[a-zA-Z]$/.test(key)) {
+      key = key.toLowerCase();
+    }
+    if (key === konami[konamiIdx]) {
+      konamiIdx++;
+      if (konamiIdx === konami.length) {
+        konamiIdx = 0;
+        // This will redirect the current page
+        window.location.href = 'Minecraft-file.html';
+      }
+    } else {
+      konamiIdx = 0;
+    }
+  });
+</script>
 </body>
 </html>
